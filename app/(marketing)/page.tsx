@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import { LandingPage } from "../components/Other/LandingPagePhoto";
 import {cn} from "@/lib/utils"
@@ -5,6 +6,7 @@ import localFont from "next/font/local"
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Navbar from "../components/Other/Navbar";
+import GoogleSignIn from "../components/Other/GoogleSignIn";
 
 
 const headingFont = localFont({
@@ -24,11 +26,10 @@ export default function Home() {
     <div className={cn("text-sm md:text-xl text-neutral-400 mt-4 font-semibold max-w-xs md:max-w-2xl text-center mx-auto", headingFont.className)}>
     Elevating Leave Management, Event Coordination, Calendar Integration, and User Administration for Seamless Business Operations
     </div>
-    <Button asChild className="flex flex-col mx-auto hover:scale-105 w-56 mt-4 items-center justify-center">
-      <Link href='/login'>
-      Start Managing Your Time
-      </Link>
-    </Button>
+    <div className="flex flex-col mx-auto hover:scale-105 w-56 mt-4 items-center justify-center">
+      <GoogleSignIn/>
+
+    </div>
     </div>
   );
 }

@@ -1,18 +1,27 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { CardItem, CardContainer } from '@/components/ui/3d-card'
 
 export const LandingPage = () => {
   return (
-    <Link href="/login">
-        <div className='transition hover:scale-105 shadow-lg flex w-full items-center rounded'>
-            <Image 
-            src={"/landingpage.jpg"}
-            alt='LandingPage'
-            height={1000}
-            width={1000} />
-        </div>
+
+        <CardContainer>
+        <CardItem
+        translateZ="150"
+        rotateX={2}
+        rotateZ={2}
+        className="-mt-10"
+      >
+        <Image
+          src="/landingpage.jpg"
+          height="1000"
+          width="1000"
+          className="sm:h-96 w-full object-cover rounded-xl group-hover/card:shadow-xl "
+          alt="thumbnail"
+        />
+      </CardItem>
+      </CardContainer>
+
     
-    </Link>
   )
 }
-

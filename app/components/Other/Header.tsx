@@ -2,10 +2,9 @@ import Container from "./Container"
 
 const Header = () => {
   return (
-    <Container>
+    <div className="max-w-[2520px] bg-white h-24 rounded-full ">
 
-        e
-    </Container>
+    </div>
   )
 }
 
